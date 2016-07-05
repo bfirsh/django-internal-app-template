@@ -34,12 +34,6 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=...
 SOCIAL_AUTH_GOOGLE_OAUTH2_WHITELISTED_DOMAINS=mycompany.com
 ```
 
-We need a real domain in development for Google's OAuth. A service called xip.io can help us with this, but the app needs to be available on a predictable IP.
-
-Run this to expose all your app's ports on 127.0.0.1:
-
-    $ pinata set native/port-forwarding true
-
 Do the initial database migration:
 
     $ docker-compose run web python manage.py migrate
